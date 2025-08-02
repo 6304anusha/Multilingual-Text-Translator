@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Result</title>
+</head>
+<body>
+    <h2>Translation & Sentiment Result</h2>
+
+    <p><strong>Original Text:</strong> {{ original_text }}</p>
+    <p><strong>Detected Language:</strong> {{ language }}</p>
+    <p><strong>Translated Text (to English):</strong> {{ translated_text }}</p>
+    <p><strong>Sentiment:</strong> {{ sentiment }} (Polarity: {{ polarity|floatformat:2 }})</p>
+
+    <h3>Sentiment Chart</h3>
+    <img src="data:image/png;base64,{{ chart_base64 }}" alt="Sentiment Chart" width="400" />
+
+    <br><br>
+</body>
+</html>

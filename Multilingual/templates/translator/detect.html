@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Translator</title>
+</head>
+<body>
+    <h2>Multilingual Translator</h2>
+    <form method="post">
+        {% csrf_token %}
+        <textarea name="input_text" placeholder="Enter text here..." required></textarea><br>
+        <select name="target_lang">
+            <option value="en">English</option>
+            <option value="hi">Hindi</option>
+            <option value="te">Telugu</option>
+        </select><br>
+        <button type="submit">Translate & Analyze</button>
+    </form>
+    {% if translated_text %}
+    <h3>Translated Text: {{ translated_text }}</h3>
+    <h3>Sentiment: {{ sentiment }}</h3>
+    {% endif %}
+</body>
+</html>
+
